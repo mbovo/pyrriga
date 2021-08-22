@@ -1,0 +1,32 @@
+import RPi.GPIO as gpio
+
+a = 23
+b = 24
+
+gpio.setmode(gpio.BCM)
+gpio.setup(a,GPIO.OUT)
+gpio.setup(b,GPIO.OUT)
+
+#turn on 
+gpio.output(a,gpio.HIGH)
+gpio.output(b,gpio.HIGH)
+
+#turn off
+gpio.output(a,gpio.LOW)
+gpio.output(b,gpio.LOW)
+
+#free before exit
+gpio.cleanup()
+
+
+
+def irrigaStart():
+  gpio.output(a, gpio.HIGH)
+  gpio.output(b, gpio.LOW)
+  time.sleep(1.5)
+
+
+def irrigaStop():
+  gpio.output(PIN_A, LOW)
+  gpio.output(PIN_B, HIGH)
+  time.sleep(1.5)
