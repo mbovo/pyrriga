@@ -20,8 +20,8 @@ def gpio_cleanup():  # free before exit
     gpio.cleanup()
 
 
-def start():
-    logging.info("Opening valve")
+def stop():
+    logging.info("Closing valve")
     gpio.output(PIN_A, gpio.HIGH)
     gpio.output(PIN_B, gpio.LOW)
     time.sleep(1.5)
@@ -29,8 +29,8 @@ def start():
     gpio.output(PIN_B, gpio.LOW)
 
 
-def stop():
-    logging.info("Closing valve")
+def start():
+    logging.info("Opening valve")
     gpio.output(PIN_A, gpio.LOW)
     gpio.output(PIN_B, gpio.HIGH)
     time.sleep(1.5)
