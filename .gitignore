@@ -1,6 +1,6 @@
 
 *.pytest_cache
-.venv
+venv
 .vscode
 *.egg-info
 .coverage

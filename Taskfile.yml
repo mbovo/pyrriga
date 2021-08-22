@@ -13,8 +13,22 @@ tasks:
     desc: "Bootstrap a dev environment"
     cmds:
       - echo "Installing virtualenv"
-      - python3 -m venv .venv
+      - python3 -m venv venv
+      - |
+        source venv/bin/activate
+        pip install --upgrade pip
+        pip install -e ".[test]"
+      - pre-commit install
+  test:
+    desc: Lunch test suite and coverage report
+    cmds:
       - source .venv/bin/activate
-      - echo "Installing/Upgrading dependencies"
-      - pip install --upgrade pip
-      - pip install -e ".[test]"
+      - pytest --cov=pyrriga .
+  build:
+    desc: Build local docker image
+    cmds:
+      - docker build -t jackbit/pyrriga:local .
+  action:
+    desc: Test github action with act
+    cmds:
+      - echo "TODO :D "
