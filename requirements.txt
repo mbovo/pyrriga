@@ -1,3 +1,4 @@
 click
 rich
-gitpython
+RPi.GPIO
+pyyaml
