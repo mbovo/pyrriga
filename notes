@@ -7,7 +7,7 @@ gpio.setmode(gpio.BCM)
 gpio.setup(a,GPIO.OUT)
 gpio.setup(b,GPIO.OUT)
 
-#turn on 
+#turn on
 gpio.output(a,gpio.HIGH)
 gpio.output(b,gpio.HIGH)
 

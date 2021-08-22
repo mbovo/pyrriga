@@ -31,9 +31,5 @@ setuptools.setup(
         "Operating System :: OS Linux",
     ],
     python_requires=">=3.6",
-    entry_points={
-        "console_scripts": [
-            "pyrriga=pyrriga.core:main"
-        ]
-    },
+    entry_points={"console_scripts": ["pyrriga=pyrriga.core:main"]},
 )
