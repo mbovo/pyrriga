@@ -22,7 +22,7 @@ tasks:
   test:
     desc: Lunch test suite and coverage report
     cmds:
-      - source .venv/bin/activate
+      - source venv/bin/activate
       - pytest --cov=pyrriga .
   build:
     desc: Build local docker image
